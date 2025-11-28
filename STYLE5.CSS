@@ -1,0 +1,234 @@
+/* Fonts & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #111;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    font-weight: 600;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x800/?technology,web') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero .btn {
+    background: #f39c12;
+    padding: 12px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+    animation: fadeInUp 2s ease forwards;
+}
+
+.hero .btn:hover {
+    background: #e67e22;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.about img {
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Services Section */
+.services {
+    background: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.services .card {
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+}
+
+.services .card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact input, .contact textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
+}
+
+.contact button {
+    padding: 12px;
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #6a11cb;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .services .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
